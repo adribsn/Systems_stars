@@ -160,5 +160,20 @@ controling_faction<-vroom(here("bt%faction%system.csv"),
                     na = c("", "NA"))
 
 ```
+## Question 9 
+
+```{r}
+summary_table <- tibble(
+  "Faction" = c("Abandoned", "Independent", "Undiscovered"),
+  "Number of Star Systems" = c(
+    sum(controling_faction %in% c("A", "I")),
+    sum(controling_faction$Faction_id == "I"),
+    sum(controling_faction$Faction_id == "U")
+  )
+)
+
+
+kable(summary_table, format = "markdown")
+```
 
 
