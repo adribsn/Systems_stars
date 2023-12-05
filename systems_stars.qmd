@@ -184,5 +184,15 @@ missing_systems <- setdiff(factions$Faction_id, controling_faction$Faction_id)
 print(length(missing_systems))
 ```
 
+## Question 11 
+
+```{r}
+ggplot(controling_faction, aes(x = subfaction, fill = subfaction)) +
+  geom_bar() +
+  labs(title = "Number of Star Systems Controlled by Each Faction",
+       x = "Faction",
+       y = "Number of Star Systems") +
+  theme_minimal()
+```
 
 
