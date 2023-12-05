@@ -3,6 +3,10 @@ title: "Systems"
 author: "Adrien Bouisson"
 format: html
 editor: visual
+execute: 
+  echo: false
+  warning: false
+  error: false
 ---
 I upload all packages for the exercise
 
@@ -29,5 +33,31 @@ I clearly uploaded everything before reading to fixed it, like that i can have a
 
 link to my github's repository : https://github.com/adribsn/Systems_stars 
 
+## Question 3 
+
+```{r}
+# importation of the main data set
+systems <- vroom(here("the_systems.csv"), na = '_', locale = locale(decimal_mark=',')) 
+
+num_systems <- nrow(systems)
+num_variables <- ncol(systems)
+numerical_variables <- sum(sapply(systems, is.numeric))
+
+# Validation message by using if / else
+
+if (num_systems == 1085 && num_variables == 8 && numerical_variables == 2) {
+  cat("Data loaded successfully!")
+} else {
+  cat("Error: Invalid loading process.")
+}
+systems |> select(where(is.numeric))
+
+head_systems <- systems %>%
+  head(n=100) # We use head_df because it allows you to quickly visualize the first observations of a dataset.
+
+```
+
+This dataset is made of `r nrow(systems)` stars described by `r ncol(systems)` variables.
+```
 
 
