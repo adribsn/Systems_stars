@@ -77,3 +77,18 @@ This dataset is made of `r nrow(systems)` stars described by `r ncol(systems)` v
 
 #II. Introductory Analysis
 
+## Question 5 
+
+```{r}
+filtered_data <- systems %>%
+  filter(!is.na(`EQUIVALENT TEMPERATURE`) & !is.na(`Mass`))
+
+ggplot(filtered_data, aes(x = `EQUIVALENT TEMPERATURE`, y = `Mass`)) +
+  geom_point() +
+  labs(title = "Mass of a star as a function of its temperature",
+       x = "EQUIVALENT TEMPERATURE)",
+       y = "Mass")
+```
+
+## Question 6 
+
