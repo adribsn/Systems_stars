@@ -143,5 +143,22 @@ knitr::kable(table_extreme_stars)
 
 We commit the two data files 
 
+## Question 8 
+
+```{r}
+# Data file factions 
+
+factions <-vroom(here("Factions.csv"),
+                    delim = ":", 
+                    quote = "\"", 
+                    na = c("", "NA"))
+# Data file controling_factions
+
+controling_faction<-vroom(here("bt%faction%system.csv"), 
+                    delim = ":", 
+                    quote = "\"", 
+                    na = c("", "NA"))
+
+```
 
 
