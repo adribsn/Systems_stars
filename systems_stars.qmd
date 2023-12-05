@@ -176,4 +176,13 @@ summary_table <- tibble(
 kable(summary_table, format = "markdown")
 ```
 
+## Question 10 
+
+```{r}
+missing_systems <- setdiff(factions$Faction_id, controling_faction$Faction_id)
+
+print(length(missing_systems))
+```
+
+
 
