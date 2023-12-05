@@ -4,3 +4,25 @@ author: "Adrien Bouisson"
 format: html
 editor: visual
 ---
+I upload all packages for the exercise
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(vroom)
+library(ggplot2)
+library(here)
+library(knitr)
+library(stringr)
+```
+
+```{r}
+here::i_am("systems_stars.Rproj")
+```
+# I. Main data set imports 
+
+## Question 1 
+
+I clearly uploaded everything before reading to fixed it, like that i can have all data files and i will commit only the main data file in my repository. 
+
+
