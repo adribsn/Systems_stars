@@ -137,4 +137,11 @@ table_extreme_stars <- systems |>
   )
 knitr::kable(table_extreme_stars)
 ```
+# III. Factions 
+
+## Question 7 
+
+We commit the two data files 
+
+
 
